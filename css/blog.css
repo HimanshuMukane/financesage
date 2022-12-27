@@ -1,0 +1,216 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --body-color: #e7e7e7;
+    --sidenavbar-color: #fff;
+    --primary-color: #2F65B9;
+    --primary-color-light: #f6f5ff;
+    --border-color:  #bfbfbf;
+    --toggle-color: #ddd;
+    --message-self: rgb(67, 68, 69);
+    --text-color: #0c0c0c;
+      --text2-color: rgb(255, 255, 255);
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+
+::selection {
+    background-color: var(--sidenavbar-color);
+    color: #fff;
+}
+
+body.dark {
+    --body-color: #262e35;
+    --sidenavbar-color: #36404a;
+    --primary-color: #7269ef;
+    --primary-color-light: #303841;
+    --toggle-color: #fff;
+    --message-self: #545e67;
+    --border-color:  #303841;
+    --text2-color: #fff;
+    --text-color: rgb(234, 234, 234);
+}
+
+
+.heading{
+    color : var(--toggle-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 88px;
+}
+.add{
+    text-decoration: none;    
+}
+.addr{
+    padding-top: 10px;
+    font-size: 8px;
+}
+.pagecontain{
+    height: 100%;
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 7%;
+    grid-column-gap: 3%;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px){
+    .pagecontain{
+        height: max-content;
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.card{
+    height: 100%;
+    border-radius: 20px !important;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img{
+    height: 240px;
+    width: 320px;
+    display: block;
+    justify-content: center;
+    overflow: hidden;
+}
+img{
+    background-size: cover;
+    height: 100%;
+}
+.info{
+    height: 35%;
+    width: 320px;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--primary-color-light);
+}
+
+.inactive{
+    display: none !important;
+}
+.next{
+    padding-left: 88px;
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.btn{
+    border: none;
+    color: var(--btn-color);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-active{
+    background-color: var(--primary-color);
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000000000000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: var(--pop-bg-color);
+    background-color: var(--pop-bg-color2);
+}
+
+  .modal-content {
+    transform: translate(0, -50%);
+    top: 50%;
+    background-color: var(--body-color);
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid var(--toggle-color);
+    width: 80%; 
+    position: relative;
+    background-color: var(--body-color);
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--toggle-color);
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s 
+}
+  
+  .closebtn {
+    color: var(--btn-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closebtn:hover,
+  .closebtn:focus {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+  }
+  
+  /* Modal Body */
+  .modal-body {padding: 2px 16px;}
+  
+  /* Modal Footer */
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: 35%; opacity: 0}
+    to {top: 50%; opacity: 1}
+  }
+  @media only screen and (max-width: 600px){
+    .card{
+        width: 80%;
+    }
+    .blogr{
+        flex-direction: column;
+        width: 100%;
+        height: 80rem;
+    }
+    .info h4{
+        padding-top: 10px;
+    }
+}
+
+
