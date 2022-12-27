@@ -14,16 +14,38 @@
     <div class ="content"><!--body content holder-->
             <div class = "container">
                 <div class ="col-md-6 col-md-offset-3">
+             
+        <?php
+require 'classes/db1.php';
+$id=$_GET['id'];
+$result = mysqli_query($con,"SELECT * FROM events WHERE blog_id = $id ");
+    ?>       
+<?php  
+while($row = mysqli_fetch_array($result)){?>
     <form method="POST">
-<label>blog_title</label><br>
-    <input type="text" name="blog_title" required class="form-control"><br><br>
-    <label>title_2</label><br>
-    <input type="text" name="title_2" required class="form-control"><br><br>
+     
+    <label>Blog Name:</label><br>
+            <input type="text" name="blog_title" value="<?php  echo $row['blog_title'];?>" required class="form-control"><br><br>
+
+            <label>Blog about:</label><br>
+            <input type="text" name="about" value="<?php  echo $row['about'];?>" required class="form-control"><br><br>
+
+            <label>Upload Path to Image:</label><br>
+            <input type="text" name="img_link" value="<?php  echo $row['img_link'];?>" required class="form-control"><br><br>
+
+            <label>Blog title_2</label><br>
+            <input type="text" name="title_2" value="<?php  echo $row['title_2'];?>" required class="form-control"><br><br>
+
+            <label>Blog description_2</label><br>
+            <input type="text" name="description_2" value="<?php  echo $row['description_2'];?>" required class="form-control"><br><br>
+
     <button type="submit" name="update" class = "btn btn-default ">Update</button>
     </div>
     </div>
     </div>
     </form>
+    
+<?php  }?>
     
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1187734967642566"
@@ -47,10 +69,13 @@
 
  if (isset($_POST["update"]))
  {
-    $blog_title=$_POST["blog_title"];
-    $title_2=$_POST["title_2"];
+     $blog_title=$_POST['blog_title'];
+     $about=$_POST['about'];
+     $img_link=$_POST['img_link'];
+     $title_2=$_POST['title_2'];
+     $description_2=$_POST['description_2'];
 
-     $sql="UPDATE events set blog_title='$blog_title',title_2='$title_2' where sid='$id'";
+     $sql="UPDATE events set blog_title='$blog_title',about='$about',img_link='$img_link',title_2='$title_2',description_2='$description_2' where blog_id='$id'";
      if($con->query($sql)===true)
      {
         echo"<script>
