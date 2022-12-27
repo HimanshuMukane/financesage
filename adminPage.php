@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 ?>             
-                <a class="btn btn-default" href = "createEventForm.php">Create Event</a><!--register button-->
+                <a class="btn btn-default" href = "createEventForm.php">Create Blog</a><!--register button-->
             </div>
         </div>
         

@@ -22,7 +22,7 @@
             <input type="text" name="about" required class="form-control"><br><br>
 
             <label>Upload Path to Image:</label><br>
-            <input type="text" name="img_link" required class="form-control"><br><br>
+            <input type="text" name="img_link" value="http://cdn.zeebiz.com/hindi/sites/default/files/styles/zeebiz_850x478/public/2022/09/30/103747-whatsapp-image-2022-07-08-at-114320-am.jpeg?itok=P3q3OEb0" required class="form-control"><br><br>
 
             <label>Blog title_2</label><br>
             <input type="text" name="title_2" required class="form-control"><br><br>

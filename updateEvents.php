@@ -47,7 +47,6 @@ while($row = mysqli_fetch_array($result)){?>
     
 <?php  }?>
     
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1187734967642566"
      crossorigin="anonymous"></script>
 
