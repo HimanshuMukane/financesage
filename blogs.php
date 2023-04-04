@@ -5,7 +5,7 @@
     <title>Blogs</title>
     <link rel="stylesheet" href="css/blog.css" />
 
-    <style>
+    <style>          
         .simple-pagination ul {
             margin: 12vh 0 4vh 0;
             bottom: 0;
